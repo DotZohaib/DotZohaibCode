@@ -20,7 +20,7 @@ export default function HomePage() {
     toast.success("CV download is processing...");
     // Open the CV link in a new tab to trigger download
     window.open(
-      "https://drive.google.com/file/d/1fDXYba3WnrBg_uyVMTod_5PQAXJ3eGa6/view?usp=sharing",
+      "https://drive.google.com/file/d/1hhYkKhvOKmBYxrTdmnHfXPN66fmLswcl/view?usp=sharing",
       "_blank"
     );
   };
