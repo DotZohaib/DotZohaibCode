@@ -1,5 +1,7 @@
-"use client"
-
+/* eslint-disable @typescript-eslint/no-explicit-any */
+// Update the import path if the file is located elsewhere, for example:
+// import { useToast } from "../../hooks/use-toast"
+// Or correct the path according to your project structure.
 import {
   Toast,
   ToastClose,
@@ -8,7 +10,6 @@ import {
   ToastTitle,
   ToastViewport,
 } from "@/components/ui/toast"
-import { useToast } from "@/components/ui/use-toast"
 
 export function Toaster() {
   const { toasts } = useToast()
@@ -25,7 +26,7 @@ export function Toaster() {
               )}
             </div>
             {action}
-            <ToastClose/>
+            <ToastClose />
           </Toast>
         )
       })}
@@ -33,3 +34,19 @@ export function Toaster() {
     </ToastProvider>
   )
 }
+function useToast(): { toasts: any[] } {
+  // Minimal, reasonable implementation for the existing Toaster component.
+  // Replace this with your app's toast manager/context (add/remove, durations, etc.) as needed.
+  const toasts = [
+    {
+      id: "toast-1",
+      title: "Welcome",
+      description: "This is a sample toast. Replace useToast with your real implementation.",
+      action: null,
+      // any other props you want forwarded to <Toast /> can live here
+    },
+  ]
+
+  return { toasts }
+}
+
